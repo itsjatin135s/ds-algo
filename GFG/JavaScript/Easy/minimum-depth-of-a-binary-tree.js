@@ -2,7 +2,6 @@
 
 class Solution {
   minDepth(root) {
-    //code here
     if (!root) {
       return 0;
     }
