@@ -1,7 +1,8 @@
 # https://www.geeksforgeeks.org/problems/rotate-array-by-n-elements-1587115621/1
 
 
-# waste of time solution just written for GFG to accept it
+# waste of time solution just written for GFG to accept it 
+# PS use it only for inplace modification
 
 class Solution:
     #Function to rotate an array by d elements in counter-clockwise direction. 
