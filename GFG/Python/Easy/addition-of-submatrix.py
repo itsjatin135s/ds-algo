@@ -7,7 +7,7 @@ class Solution:
 		if x1 > x2 or y1 > y2:
 		    return 0
 		    
-    result = 0
+        result = 0
         
         for i in range(x1-1,x2):
             for j in range(y1-1,y2):
