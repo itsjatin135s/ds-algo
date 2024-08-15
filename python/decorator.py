@@ -1,6 +1,7 @@
 import time
 from functools import wraps
 
+
 def print_execution_time(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
