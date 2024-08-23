@@ -35,6 +35,39 @@ const smallestSubWithSum = (arr, x) => {
   return minLength == n + 1 ? 0 : minLength;
 };
 
+// new approach
+
+class Solution {
+  smallestSubWithSum(x, arr) {
+    let start = 0;
+    let end = 0;
+    let num = 0;
+    let count = 0;
+    const n = arr.length;
+    let res = n + 1;
+
+    while (end < n || num > x) {
+      if (num <= x) {
+        num += arr[end];
+        end += 1;
+        count += 1;
+      }
+      if (num > x) {
+        res = Math.min(res, count);
+        count -= 1;
+        num -= arr[start];
+        start += 1;
+      }
+    }
+
+    return res === n + 1 ? 0 : res;
+  }
+}
+
+// Example usage:
+const solution = new Solution();
+console.log(solution.smallestSubWithSum(15, [1, 2, 3, 4, 5, 6, 7, 8])); // Output should match the Python version
+
 //  My Wrong approach
 /*
             assign a number and then add the following number to it is the 
