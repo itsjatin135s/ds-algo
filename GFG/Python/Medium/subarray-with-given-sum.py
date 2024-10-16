@@ -11,3 +11,20 @@ class Solution:
             prev_sums[curr_sum] = i
 
         return [-1]
+
+
+#  my sol
+def sub_array_sum_2(self, arr, s):
+    # code here
+    curr_sum = 0
+    res = [0, 0]
+    while res[1] < len(arr):
+        if curr_sum > s:
+            curr_sum -= arr[res[0]]
+            res[0] += 1
+        elif curr_sum < s:
+            curr_sum += arr[res[1]]
+            res[1] += 1
+        if curr_sum == s:
+            return [res[0]+1, res[1]]
+        return [-1]
